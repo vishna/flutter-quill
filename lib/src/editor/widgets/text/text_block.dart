@@ -295,7 +295,7 @@ class EditableTextBlock extends StatelessWidget {
       width: isOrdered || isCodeBlock
           ? numberPointWidthBuilder(fontSize, count)
           : isUnordered
-              ? fontSize * 2
+              ? numberPointWidthBuilder(fontSize, 1) // same as fontSize * 2
               : null,
       padding: isOrdered || isUnordered
           ? fontSize / 2
