@@ -512,6 +512,9 @@ class QuillEditorConfig {
     void Function()? onScribbleActivated,
     EdgeInsets? scribbleAreaInsets,
     void Function(TextInputAction action)? onPerformAction,
+    bool Function(
+            TapDragUpDetails details, TextPosition Function(Offset offset))?
+        onTapUp,
   }) {
     return QuillEditorConfig(
       customLeadingBlockBuilder:
@@ -580,6 +583,7 @@ class QuillEditorConfig {
       onScribbleActivated: onScribbleActivated ?? this.onScribbleActivated,
       scribbleAreaInsets: scribbleAreaInsets ?? this.scribbleAreaInsets,
       onPerformAction: onPerformAction ?? this.onPerformAction,
+      onTapUp: onTapUp ?? this.onTapUp,
     );
   }
 }
